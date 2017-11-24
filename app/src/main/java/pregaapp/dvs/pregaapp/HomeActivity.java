@@ -39,6 +39,12 @@ public class HomeActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        //check here if usertype == d then
+
+            navigationView.getMenu().clear();
+            navigationView.inflateMenu(R.menu.doctor);
+
+
         navigationView.setNavigationItemSelectedListener(this);
     }
 

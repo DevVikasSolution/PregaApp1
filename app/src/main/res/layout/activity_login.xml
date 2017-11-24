@@ -11,17 +11,19 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:background="@color/colorPrimary"
         android:layout_height="?attr/actionBarSize"
-        app:theme="@style/ThemeOverlay.AppCompat"
-        app:navigationIcon="?attr/homeAsUpIndicator"/>
+        android:background="@color/colorPrimary"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:textSize="20dp"
         android:text="Login to First Step"
+        android:textStyle="normal"
         android:layout_below="@+id/login"
         android:gravity="center_horizontal"
         android:textColor="#000" />
@@ -31,14 +33,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/number">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/mobilenumber"
-        android:inputType="number"
-        android:layout_margin="16dp"
-        android:hint="Mobile Number"
-        android:textColor="#000"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mobilenumber"
+            android:inputType="number"
+            android:layout_margin="16dp"
+            android:hint="Mobile Number"
+            android:textColor="#000"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -70,4 +72,6 @@
         android:layout_below="@+id/login"
         android:gravity="center_horizontal"
         android:textColor="@color/colorPrimary" />
+
+
 </LinearLayout>

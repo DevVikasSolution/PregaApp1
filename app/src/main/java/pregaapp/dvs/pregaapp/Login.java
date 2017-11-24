@@ -47,6 +47,7 @@ public class Login extends AppCompatActivity {
         toolbar =  findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp); // Set the icon
 
+
         // Icon click listener
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

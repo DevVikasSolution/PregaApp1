@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="15dp"
+    tools:context="pregaapp.dvs.pregaapp.Otpgeneration">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="?attr/homeAsUpIndicator"/>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="170dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="20dp"
+        >
+
+        <EditText
+            android:id="@+id/otpnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Otp"
+            android:inputType="number"
+            android:textColor="#000" />
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/verify"
+        android:background="@drawable/rundedbutton"
+        android:text="Verify"
+        android:layout_below="@+id/otp"
+        android:textAllCaps="false"
+        android:layout_marginTop="30dp"
+        />
+
+
+</RelativeLayout>
