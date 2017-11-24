@@ -40,9 +40,11 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         //check here if usertype == d then
+if(true){
+    navigationView.getMenu().clear();
+    navigationView.inflateMenu(R.menu.doctor);
+}
 
-            navigationView.getMenu().clear();
-            navigationView.inflateMenu(R.menu.doctor);
 
 
         navigationView.setNavigationItemSelectedListener(this);
