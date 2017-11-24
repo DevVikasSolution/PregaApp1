@@ -43,6 +43,7 @@ public class HomeActivity extends AppCompatActivity
 if(true){
     navigationView.getMenu().clear();
     navigationView.inflateMenu(R.menu.doctor);
+    
 }
 
 
