@@ -1,5 +1,6 @@
 package pregaapp.dvs.pregaapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -100,9 +102,12 @@ public class HomeActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_logout) {
-            
-
+            Log.d("Logout Called",""+item.getItemId());
+            Intent gologin=new Intent(getApplicationContext(),Login.class);
+            startActivity(gologin);
+            Toast.makeText(this, "Logout Successfull", Toast.LENGTH_SHORT).show();//to show message
             return true;
+            
         }
 
         return super.onOptionsItemSelected(item);
