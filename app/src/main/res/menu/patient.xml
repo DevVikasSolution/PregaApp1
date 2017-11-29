@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_appointment"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Book Appointment" />
+    <item
+        android:id="@+id/nav_notify"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Notification" />
+    <item
+        android:id="@+id/nav_edtprofile"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Edit Profile" />
+
+</menu>

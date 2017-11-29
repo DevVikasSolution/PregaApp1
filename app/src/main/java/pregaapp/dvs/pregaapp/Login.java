@@ -33,6 +33,8 @@ public class Login extends AppCompatActivity {
     TextView textView;
     String phonenumber = "";
     String Password = "";
+    String username ="";
+    String response;
 
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -75,6 +77,13 @@ public class Login extends AppCompatActivity {
                 }
                 if (isValid == true) {
                     Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                    Bundle bundle = new Bundle();
+
+                    username ="ASSSSS";
+                    bundle.putString("name",username);
+                    bundle.putString("mobilenumber",phonenumber);
+                    bundle.putString("userType","P");
+                    intent.putExtras(bundle);
                     startActivity(intent);
 
                 }

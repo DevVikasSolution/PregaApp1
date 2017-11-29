@@ -3,6 +3,7 @@ package pregaapp.dvs.pregaapp;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,9 +13,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    TextView username,mobilenumber2;
+    String usertype = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +46,28 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         //check here if usertype == d then
-if(true){
+        //passing value through bundle
+        View header=navigationView.getHeaderView(0);
+        username = (TextView)header.findViewById(R.id.txt1);
+        mobilenumber2 = (TextView)header.findViewById(R.id.textView);
+        Bundle bundle1 = getIntent().getExtras();
+        String data1 = bundle1.getString("name");
+        String data2 = bundle1.getString("mobilenumber");
+        usertype = bundle1.getString("userType");
+        username.setText(data1);
+        mobilenumber2.setText(data2);
+   if(usertype.equalsIgnoreCase("d")){
     navigationView.getMenu().clear();
     navigationView.inflateMenu(R.menu.doctor);
-    
-}
+}else
+    if (usertype.equalsIgnoreCase("r")){
+        navigationView.getMenu().clear();
+        navigationView.inflateMenu(R.menu.receptionist);
+    }else
+        if (usertype.equalsIgnoreCase( "p")){
+            navigationView.getMenu().clear();
+            navigationView.inflateMenu(R.menu.patient);
+        }
 
 
 
@@ -76,7 +99,8 @@ if(true){
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_logout) {
+
             return true;
         }
 
@@ -89,13 +113,12 @@ if(true){
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_doctor) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_receptionist) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_patient) {
 
         } else if (id == R.id.nav_share) {
 
